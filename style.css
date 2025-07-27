@@ -1,0 +1,74 @@
+:root {
+  --bg-color: hsl(0, 0%, 95%);
+
+  --grey-1: hsl(0, 0%, 60%);
+  --grey-2: hsl(0, 0%, 40%);
+  --grey-3: hsl(0, 0%, 20%);
+  --black: hsl(0, 0%, 0%);
+
+  --header-footer-bg: var(--grey-2);
+  --header-footer-text: white;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header,
+footer {
+  background-color: var(--header-footer-bg);
+  color: var(--header-footer-text);
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+}
+
+.header {
+  height: 64px;
+  font-size: 36px;
+  font-weight: 900;
+}
+
+footer {
+  height: 36px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+footer a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+}
+
+footer a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+footer a:hover::after {
+  transform: scaleX(1);
+}
