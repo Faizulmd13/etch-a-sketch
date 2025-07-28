@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-a-Sketch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
@@ -11,7 +17,22 @@
     <header>
       <div class="header">Etch-a-Sketch</div>
     </header>
-    <section class="content"></section>
+    <section class="content">
+      <div class="controls">
+        <div class="input">
+          <p>Enter the no of grids:</p>
+          <input type="number" />
+        </div>
+        <div class="btns">
+          <button id="form">Form Grid</button>
+          <button id="grey" class="grid-color">Grey</button>
+          <button id="white" class="grid-color">Erase</button>
+          <button id="rainbow" class="grid-color">Raibow</button>
+          <button id="clear">Clear Grid</button>
+        </div>
+      </div>
+      <div class="container"></div>
+    </section>
     <footer>
       <p>
         Created by:
