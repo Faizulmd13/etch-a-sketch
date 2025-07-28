@@ -1,13 +1,13 @@
 :root {
-  --bg-color: hsl(0, 0%, 95%);
+  --bg-color: #f2f2f2;
 
-  --grey-1: hsl(0, 0%, 60%);
-  --grey-2: hsl(0, 0%, 40%);
-  --grey-3: hsl(0, 0%, 20%);
-  --black: hsl(0, 0%, 0%);
+  --grey-1: #999;
+  --grey-2: #666;
+  --grey-3: #333;
+  --black: #000;
 
   --header-footer-bg: var(--grey-2);
-  --header-footer-text: white;
+  --header-footer-text: #fff;
 }
 
 * {
@@ -25,25 +25,21 @@ header,
 footer {
   background-color: var(--header-footer-bg);
   color: var(--header-footer-text);
-  padding: 1rem;
+  padding: 8px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.content {
-  display: flex;
-  flex: 1;
+  font-family: "Audiowide", cursive;
 }
 
 .header {
-  height: 64px;
+  height: 60px;
   font-size: 36px;
   font-weight: 900;
 }
 
-footer {
+.footer {
   height: 36px;
   font-size: 18px;
   font-weight: 700;
@@ -53,7 +49,7 @@ footer a {
   position: relative;
   display: inline-block;
   text-decoration: none;
-  color: #fff;
+  color: var(--header-footer-text);
 }
 
 footer a::after {
@@ -71,4 +67,79 @@ footer a::after {
 
 footer a:hover::after {
   transform: scaleX(1);
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  padding: 0 48px;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  margin: 240px auto;
+  gap: 12px;
+}
+
+.input,
+.btns {
+  display: flex;
+  gap: 24px;
+}
+
+.btns {
+  align-items: center;
+  justify-content: center;
+}
+
+.btns button {
+  padding: 2px;
+}
+
+.container {
+  display: flex;
+  margin: 10px auto;
+  width: 400px;
+  height: 400px;
+  flex-wrap: wrap;
+  border: var(--grey-2) solid 12px;
+  border-left-color: var(--grey-1);
+  border-bottom-color: var(--grey-1);
+}
+
+/* Input field */
+input[type="number"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+  border-color: #007bff;
+}
+
+.btns button {
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s, outline 0.2s;
+}
+
+.btns button:hover {
+  transform: scale(1.05);
+}
+
+.grid-color.active {
+  outline: 2px solid #333;
+  box-shadow: 0 0 0 2px #fff inset;
 }
